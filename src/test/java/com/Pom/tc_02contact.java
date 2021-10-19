@@ -42,7 +42,7 @@ public class tc_02contact
 
 	public void logintoApp() throws IOException 	
 	{
-		usernametxtfld.sendKeys(fileutility.readDatafromPropfile("username"));
+		usernametxtfld.sendkeys(fileutility.readDatafromPropfile("username"));
 		passwordtxtfld.sendKeys(fileutility.readDatafromPropfile("password"));
 		loginbtn.click();
 	}
