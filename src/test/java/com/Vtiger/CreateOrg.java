@@ -35,8 +35,7 @@ public class CreateOrg {
 	    {
 	    	driver = new FirefoxDriver();
 	    }
-		// WebDriver driver = new ChromeDriver();
-	    driver.get(prop.getProperty("URL"));
+	    driver.get(prop.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	

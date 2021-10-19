@@ -25,6 +25,7 @@ public class TestCase_002_CreateContactmodule
 				FileInputStream fis = new FileInputStream ("..\\SDETHYD_1\\commond.properties");
 			    Properties prop = new Properties ();
 			    prop.load(fis);
+
 			    
 			    if
 			    (prop.getProperty("browser").equalsIgnoreCase("Chrome"))
@@ -36,7 +37,7 @@ public class TestCase_002_CreateContactmodule
 			    {
 			    	driver = new FirefoxDriver();
 			    }
-				//WebDriver driver = new ChromeDriver();
+				
 			    driver.get(prop.getProperty("URL"));
 				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
