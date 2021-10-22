@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class TestCase001 {
@@ -21,11 +22,11 @@ public class TestCase001 {
 		public void Tc01_TestCase() throws Throwable{
 		
 		{
-			FileInputStream fis = new FileInputStream("..\\SDETHYD_1\\commond.properties");
+			FileInputStream fis = new FileInputStream("..\\SDETHYD11\\commond.properties");
 			Properties prop = new Properties();
 			prop.load(fis);
 
-			FileInputStream fs = new FileInputStream("..\\SDETHYD_1\\assign.xlsx");
+			FileInputStream fs = new FileInputStream("..\\SDETHYD11\\assign.xlsx");
 			Workbook wb = WorkbookFactory.create(fs);
 			if
 		    (prop.getProperty("browser").equalsIgnoreCase("Chrome"))
@@ -93,8 +94,10 @@ public class TestCase001 {
 				if (contactname.isDisplayed()) 
 				{
 					Assert.assertTrue(true);
-				}	
 					
+				}	
+				Reporter.log("True");
+				
 			driver.close();
 		}
 }

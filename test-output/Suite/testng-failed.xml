@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Test_runner2(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.Vtiger.CreateOrg">
+        <methods>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="closeConnection"/>
+          <include name="createorgnaization"/>
+          <include name="startConnection"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.Vtiger.CreateOrg -->
+    </classes>
+  </test> <!-- Test_runner2(failed) -->
+  <test thread-count="2" parallel="tests" name="Testrunner1(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.Vtiger.Contactmodule">
+        <methods>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="closeConnection"/>
+          <include name="startConnection"/>
+          <include name="createcontact"/>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.Vtiger.Contactmodule -->
+    </classes>
+  </test> <!-- Testrunner1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
